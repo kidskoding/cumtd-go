@@ -6,25 +6,39 @@ on:
   pull_request:
 
 jobs:
-  test:
+  vet:
+    name: vet
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-go@v5
         with:
           go-version-file: go.mod
+      - run: go vet ./...
 
-      - name: vet
-        run: go vet ./...
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - run: go test -race -coverpkg=./... -coverprofile=coverage.out ./...
+      - run: go tool cover -func=coverage.out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: coverage.out
 
-      - name: test
-        run: go test -race -coverpkg=./... -coverprofile=coverage.out ./...
-
-      - name: coverage
-        run: go tool cover -func=coverage.out
-
-      - name: staticcheck
-        uses: dominikh/staticcheck-action@v1
+  staticcheck:
+    name: staticcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - uses: dominikh/staticcheck-action@v1
         with:
           version: latest
