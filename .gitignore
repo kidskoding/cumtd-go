@@ -26,3 +26,9 @@ profile.cov
 # Editor/IDE
 # .idea/
 # .vscode/
+
+# Graphify
+graphify-out/
+
+# Claude Code
+.claude/
