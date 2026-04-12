@@ -1,0 +1,43 @@
+{
+  "data": [
+    {
+      "id": "ILLINI",
+      "sortNumber": 1,
+      "routeGroupName": "Illini",
+      "color": "#FF6600",
+      "textColor": "#FFFFFF",
+      "routes": [
+        {
+          "id": "ILLINI",
+          "number": "22",
+          "firstTrip": "06:00:00",
+          "lastTrip": "23:00:00",
+          "lastTripAfterMidnight": false,
+          "dayType": null,
+          "gtfsRoutes": [],
+          "routeGroupId": "ILLINI"
+        }
+      ]
+    },
+    {
+      "id": "GOLDLINE",
+      "sortNumber": 2,
+      "routeGroupName": "Gold Line",
+      "color": "#FFD700",
+      "textColor": "#000000",
+      "routes": [
+        {
+          "id": "GOLDLINE",
+          "number": "1",
+          "firstTrip": "07:00:00",
+          "lastTrip": "22:00:00",
+          "lastTripAfterMidnight": false,
+          "dayType": null,
+          "gtfsRoutes": [],
+          "routeGroupId": "GOLDLINE"
+        }
+      ]
+    }
+  ],
+  "error": null
+}

@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "stopId": "STOP1",
+      "headsign": "North Terminal",
+      "trip": { "tripId": "TRIP1", "direction": { "id": "N", "name": "Northbound" } },
+      "blockId": "BLOCK1",
+      "recordedTime": "2024-01-15T08:00:00Z",
+      "scheduledDeparture": "08:05:00",
+      "estimatedDeparture": "08:06:00",
+      "vehicleId": "VEH1",
+      "originStopId": "STOP_ORIGIN",
+      "destinationStopId": "STOP_DEST",
+      "location": { "latitude": 40.1164, "longitude": -88.2434 },
+      "shapeId": "SHAPE1",
+      "minutesTillDeparture": 6,
+      "isRealTime": true,
+      "isHopper": false,
+      "destination": "North Terminal",
+      "departsIn": "6 min",
+      "isIStop": false,
+      "uniqueId": "DEP1",
+      "route": {
+        "id": "ILLINI",
+        "routeGroupId": "ILLINI",
+        "gtfsRouteId": "GTFS_ILLINI",
+        "longName": "Illini",
+        "shortName": "22",
+        "color": "#FF6600",
+        "textColor": "#FFFFFF"
+      }
+    },
+    {
+      "stopId": "STOP1",
+      "headsign": "South Terminal",
+      "trip": { "tripId": "TRIP2", "direction": { "id": "S", "name": "Southbound" } },
+      "blockId": "BLOCK2",
+      "recordedTime": "2024-01-15T08:00:00Z",
+      "scheduledDeparture": "08:15:00",
+      "estimatedDeparture": null,
+      "vehicleId": null,
+      "originStopId": null,
+      "destinationStopId": null,
+      "location": null,
+      "shapeId": null,
+      "minutesTillDeparture": 15,
+      "isRealTime": false,
+      "isHopper": false,
+      "destination": "South Terminal",
+      "departsIn": "15 min",
+      "isIStop": false,
+      "uniqueId": "DEP2",
+      "route": {
+        "id": "ILLINI",
+        "routeGroupId": "ILLINI",
+        "gtfsRouteId": "GTFS_ILLINI",
+        "longName": null,
+        "shortName": "22",
+        "color": null,
+        "textColor": null
+      }
+    }
+  ],
+  "error": null
+}

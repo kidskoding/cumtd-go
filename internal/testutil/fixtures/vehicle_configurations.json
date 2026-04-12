@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "id": "CONFIG1",
+      "type": "bus",
+      "powertrainType": "diesel",
+      "capacity": 40
+    },
+    {
+      "id": "CONFIG2",
+      "type": "bus",
+      "powertrainType": "electric",
+      "capacity": 35
+    }
+  ],
+  "error": null
+}

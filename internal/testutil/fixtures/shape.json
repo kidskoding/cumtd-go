@@ -1,0 +1,11 @@
+{
+  "data": {
+    "id": "SHAPE1",
+    "shapePoints": [
+      { "sequence": 1, "lat": 40.1164, "lon": -88.2434 },
+      { "sequence": 2, "lat": 40.1170, "lon": -88.2440 },
+      { "sequence": 3, "lat": 40.1180, "lon": -88.2450 }
+    ]
+  },
+  "error": null
+}

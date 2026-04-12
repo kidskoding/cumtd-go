@@ -1,0 +1,19 @@
+{
+  "data": {
+    "id": "STOP1",
+    "name": "Main & First",
+    "code": "001",
+    "location": { "latitude": 40.1164, "longitude": -88.2434 },
+    "boardingPoints": [
+      {
+        "id": "STOP1:1",
+        "name": "Northbound",
+        "location": { "latitude": 40.1164, "longitude": -88.2434 }
+      }
+    ],
+    "stopGroups": [
+      { "id": "SG1", "name": "Main Street" }
+    ]
+  },
+  "error": null
+}

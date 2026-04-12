@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "id": "STOP1",
+      "name": "Main & First",
+      "code": "001",
+      "location": { "latitude": 40.1164, "longitude": -88.2434 }
+    },
+    {
+      "id": "STOP2",
+      "name": "Main & Second",
+      "code": "002",
+      "location": { "latitude": 40.1170, "longitude": -88.2440 }
+    }
+  ],
+  "error": null
+}

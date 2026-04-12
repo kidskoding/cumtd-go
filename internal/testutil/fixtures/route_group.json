@@ -1,0 +1,22 @@
+{
+  "data": {
+    "id": "ILLINI",
+    "sortNumber": 1,
+    "routeGroupName": "Illini",
+    "color": "#FF6600",
+    "textColor": "#FFFFFF",
+    "routes": [
+      {
+        "id": "ILLINI",
+        "number": "22",
+        "firstTrip": "06:00:00",
+        "lastTrip": "23:00:00",
+        "lastTripAfterMidnight": false,
+        "dayType": null,
+        "gtfsRoutes": [],
+        "routeGroupId": "ILLINI"
+      }
+    ]
+  },
+  "error": null
+}

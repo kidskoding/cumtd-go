@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "id": "TRIP1",
+      "blockId": "BLOCK1",
+      "shapeId": "SHAPE1",
+      "headsign": "North Terminal",
+      "direction": { "id": "N", "name": "Northbound" },
+      "route": null
+    },
+    {
+      "id": "TRIP2",
+      "blockId": "BLOCK2",
+      "shapeId": "SHAPE2",
+      "headsign": "South Terminal",
+      "direction": { "id": "S", "name": "Southbound" },
+      "route": null
+    }
+  ],
+  "error": null
+}

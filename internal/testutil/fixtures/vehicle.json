@@ -1,0 +1,9 @@
+{
+  "data": {
+    "id": "VEH1",
+    "vehicleConfigurationId": "CONFIG1",
+    "isActive": true,
+    "dateInService": "2020-01-01"
+  },
+  "error": null
+}

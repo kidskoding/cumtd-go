@@ -1,0 +1,20 @@
+{
+  "data": {
+    "id": "TRIP1",
+    "blockId": "BLOCK1",
+    "shapeId": "SHAPE1",
+    "headsign": "North Terminal",
+    "direction": { "id": "N", "name": "Northbound" },
+    "route": {
+      "id": "ILLINI",
+      "number": "22",
+      "firstTrip": "06:00:00",
+      "lastTrip": "23:00:00",
+      "lastTripAfterMidnight": false,
+      "dayType": null,
+      "gtfsRoutes": [],
+      "routeGroupId": "ILLINI"
+    }
+  },
+  "error": null
+}

@@ -1,0 +1,18 @@
+{
+  "data": {
+    "id": "VEH1",
+    "location": { "latitude": 40.1164, "longitude": -88.2434 },
+    "lastUpdated": "2024-01-15T08:00:00Z",
+    "trip": { "tripId": "TRIP1", "direction": { "id": "N", "name": "Northbound" } },
+    "route": {
+      "id": "ILLINI",
+      "routeGroupId": "ILLINI",
+      "gtfsRouteId": "GTFS_ILLINI",
+      "longName": "Illini",
+      "shortName": "22",
+      "color": "#FF6600",
+      "textColor": "#FFFFFF"
+    }
+  },
+  "error": null
+}

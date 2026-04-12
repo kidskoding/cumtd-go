@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "id": "VEH1",
+      "vehicleConfigurationId": "CONFIG1",
+      "isActive": true,
+      "dateInService": "2020-01-01"
+    },
+    {
+      "id": "VEH2",
+      "vehicleConfigurationId": "CONFIG2",
+      "isActive": false,
+      "dateInService": null
+    }
+  ],
+  "error": null
+}

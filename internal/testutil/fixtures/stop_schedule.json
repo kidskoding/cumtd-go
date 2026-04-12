@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "stopId": "STOP1",
+      "tripId": "TRIP1",
+      "routeId": "ILLINI",
+      "gtfsRouteId": "GTFS_ILLINI",
+      "direction": { "id": "N", "name": "Northbound" },
+      "stopSequence": 3,
+      "arrivalTime": "08:00:00",
+      "arrivalPastMidnight": false,
+      "departureTime": "08:01:00",
+      "departurePastMidnight": false,
+      "stopHeadsign": "North Terminal"
+    },
+    {
+      "stopId": "STOP1",
+      "tripId": "TRIP2",
+      "routeId": "ILLINI",
+      "gtfsRouteId": "GTFS_ILLINI",
+      "direction": { "id": "S", "name": "Southbound" },
+      "stopSequence": 7,
+      "arrivalTime": "09:00:00",
+      "arrivalPastMidnight": false,
+      "departureTime": "09:01:00",
+      "departurePastMidnight": false,
+      "stopHeadsign": null
+    }
+  ],
+  "error": null
+}

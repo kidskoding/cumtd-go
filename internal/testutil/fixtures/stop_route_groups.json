@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "id": "ILLINI",
+      "sortNumber": 1,
+      "routeGroupName": "Illini",
+      "color": "#FF6600",
+      "textColor": "#FFFFFF",
+      "routes": []
+    },
+    {
+      "id": "GOLDLINE",
+      "sortNumber": 2,
+      "routeGroupName": "Gold Line",
+      "color": "#FFD700",
+      "textColor": "#000000",
+      "routes": []
+    }
+  ],
+  "error": null
+}
