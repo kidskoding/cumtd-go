@@ -14,26 +14,6 @@ type apiErrBody struct {
 	Code    int    `json:"code"`
 }
 
-// envelope is the top-level API response wrapper.
-type envelope[T any] struct {
-	Data  T           `json:"data"`
-	Error *apiErrBody `json:"error,omitempty"`
-}
-
-// decode unmarshals a raw response body into an envelope and returns the data.
-func decode[T any](body []byte) (T, error) {
-	var env envelope[T]
-	if err := json.Unmarshal(body, &env); err != nil {
-		var zero T
-		return zero, fmt.Errorf("cumtd: decode: %w", err)
-	}
-	if env.Error != nil {
-		var zero T
-		return zero, &APIError{Body: env.Error.Message}
-	}
-	return env.Data, nil
-}
-
 // get performs a GET request, injects auth headers, and decodes dst from the
 // response envelope's data field.
 func (c *Client) get(ctx context.Context, path string, params url.Values, dst any) error {
