@@ -13,7 +13,7 @@ func TestTransport_authHeader(t *testing.T) {
 	srv := testutil.NewMockServer(t, map[string]testutil.MockRoute{
 		"/routes/groups": {
 			StatusCode: 200,
-			Body:       []byte(`{"data":[],"error":null}`),
+			Body:       []byte(`{"result":[],"error":null}`),
 		},
 	})
 
@@ -37,8 +37,8 @@ func TestTransport_authHeader(t *testing.T) {
 	if capturedReq == nil {
 		t.Fatal("no request captured")
 	}
-	if got := capturedReq.Header.Get("X-Api-Key"); got != "test-key-123" {
-		t.Errorf("X-Api-Key = %q, want %q", got, "test-key-123")
+	if got := capturedReq.Header.Get("X-ApiKey"); got != "test-key-123" {
+		t.Errorf("X-ApiKey = %q, want %q", got, "test-key-123")
 	}
 	if got := capturedReq.Header.Get("Accept"); got != "application/json" {
 		t.Errorf("Accept = %q, want application/json", got)
@@ -52,7 +52,7 @@ func TestTransport_contextCancel(t *testing.T) {
 	srv := testutil.NewMockServer(t, map[string]testutil.MockRoute{
 		"/routes/groups": {
 			StatusCode: 200,
-			Body:       []byte(`{"data":[],"error":null}`),
+			Body:       []byte(`{"result":[],"error":null}`),
 		},
 	})
 	c := cumtd.New("key", cumtd.WithBaseURL(srv.URL))

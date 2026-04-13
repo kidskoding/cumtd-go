@@ -26,7 +26,7 @@ func (c *Client) get(ctx context.Context, path string, params url.Values, dst an
 	if err != nil {
 		return err
 	}
-	req.Header.Set("X-Api-Key", c.apiKey)
+	req.Header.Set("X-ApiKey", c.apiKey)
 	req.Header.Set("User-Agent", c.userAgent)
 	req.Header.Set("Accept", "application/json")
 
@@ -49,8 +49,8 @@ func (c *Client) get(ctx context.Context, path string, params url.Values, dst an
 	}
 
 	var raw struct {
-		Data  json.RawMessage `json:"data"`
-		Error *apiErrBody     `json:"error,omitempty"`
+		Result json.RawMessage `json:"result"`
+		Error  *apiErrBody     `json:"error,omitempty"`
 	}
 	if err := json.Unmarshal(body, &raw); err != nil {
 		return fmt.Errorf("cumtd: decode envelope: %w", err)
@@ -58,5 +58,5 @@ func (c *Client) get(ctx context.Context, path string, params url.Values, dst an
 	if raw.Error != nil {
 		return &APIError{StatusCode: resp.StatusCode, Body: raw.Error.Message}
 	}
-	return json.Unmarshal(raw.Data, dst)
+	return json.Unmarshal(raw.Result, dst)
 }
