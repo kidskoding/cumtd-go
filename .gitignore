@@ -8,6 +8,11 @@
 *.so
 *.dylib
 
+# Compiled example binaries (extensionless, macOS/Linux)
+agent-tool
+departure-board
+vehicle-tracker
+
 # Test binary, built with `go test -c`
 *.test
 
