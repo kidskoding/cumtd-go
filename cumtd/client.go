@@ -50,7 +50,7 @@ import (
 
 const (
 	// DefaultBaseURL is the MTD API v3 base URL.
-	DefaultBaseURL = "https://api.mtd.dev/api/v3"
+	DefaultBaseURL = "https://api.mtd.dev"
 
 	// DefaultTimeout is the default HTTP client timeout.
 	DefaultTimeout = 10 * time.Second

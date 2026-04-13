@@ -42,7 +42,7 @@ go work sync                                 # sync workspace
 
 ## API
 
-- Base URL: `https://api.mtd.dev/api/v3`
+- Base URL: `https://api.mtd.dev`
 - Auth: `X-Api-Key` header (NOT a query param — changed from v2)
 - Docs: https://mtd.dev
 
