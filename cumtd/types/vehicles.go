@@ -36,14 +36,20 @@ type VehicleLocationTrip struct {
 
 // VehicleConfiguration describes the physical characteristics of a vehicle model.
 type VehicleConfiguration struct {
-	// ID is the unique configuration identifier.
+	// ID is the unique configuration identifier (UUID).
 	ID string `json:"id"`
-	// Type is the vehicle class (e.g. "bus").
-	Type VehicleType `json:"type"`
-	// PowertrainType is the propulsion technology (e.g. "diesel", "electric", "hybrid").
-	PowertrainType VehiclePowertrainType `json:"powertrainType"`
-	// Capacity is the total passenger capacity.
-	Capacity int `json:"capacity"`
+	// VehicleType is the vehicle class (e.g. "bus").
+	VehicleType VehicleType `json:"vehicleType"`
+	// Year is the model year. The API may return an int or string; use internal/coerce to convert.
+	Year any `json:"year"`
+	// Make is the vehicle manufacturer (e.g. "Nova Bus").
+	Make string `json:"make"`
+	// Model is the vehicle model name.
+	Model string `json:"model"`
+	// LengthFeet is the vehicle length in feet. The API may return an int, string, or null.
+	LengthFeet any `json:"lengthFeet"`
+	// Powertrain is the propulsion technology (e.g. "diesel", "electric", "hybrid").
+	Powertrain VehiclePowertrainType `json:"powertrain"`
 }
 
 // VehicleType is the class of a vehicle (e.g. "bus").
