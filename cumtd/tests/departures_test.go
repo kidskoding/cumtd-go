@@ -54,14 +54,14 @@ func TestGetDepartures_timeParam(t *testing.T) {
 			StatusCode: 200,
 			Body:       testutil.MustReadFixture(t, "departures.json"),
 			AssertQuery: func(t *testing.T, q url.Values) {
-				if q.Get("time") != "08:00:00" {
-					t.Errorf("time = %q, want 08:00:00", q.Get("time"))
+				if q.Get("time") != "60" {
+					t.Errorf("time = %q, want 60", q.Get("time"))
 				}
 			},
 		},
 	})
 	c := cumtd.New("key", cumtd.WithBaseURL(srv.URL))
-	_, err := c.GetDepartures(context.Background(), "STOP1", &cumtd.GetDeparturesOptions{Time: "08:00:00"})
+	_, err := c.GetDepartures(context.Background(), "STOP1", &cumtd.GetDeparturesOptions{MinutesAhead: 60})
 	if err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
