@@ -9,14 +9,17 @@ type Shape struct {
 	ShapePoints []ShapePoint `json:"shapePoints"`
 }
 
-// ShapePoint is a single lat/lon waypoint in a [Shape].
+// ShapePoint is a single waypoint in a [Shape].
 type ShapePoint struct {
-	// Sequence is the 1-based position of this point in the shape.
-	Sequence int `json:"sequence"`
-	// Lat is the latitude in decimal degrees.
-	Lat float64 `json:"lat"`
-	// Lon is the longitude in decimal degrees.
-	Lon float64 `json:"lon"`
+	// Sequence is the 1-based position of this point in the shape. The API may
+	// return an int or string; use internal/coerce to convert.
+	Sequence any `json:"sequence"`
+	// Coordinates is the geographic position of this point.
+	Coordinates *Coordinates `json:"coordinates"`
+	// DistanceTraveled is the cumulative distance from the shape origin in some unit.
+	DistanceTraveled float64 `json:"distanceTraveled"`
+	// StopID is the stop at this point, if any. Nil for non-stop waypoints.
+	StopID *string `json:"stopId"`
 }
 
 // ShapePolyline is a [Shape] encoded as a Google-encoded polyline string.
