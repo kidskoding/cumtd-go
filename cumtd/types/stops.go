@@ -38,14 +38,27 @@ type StopGroup struct {
 // StopSearchResult is a lightweight stop record returned by
 // [cumtd.Client.SearchStops].
 type StopSearchResult struct {
-	// ID is the unique stop identifier.
-	ID string `json:"id"`
+	// StopID is the unique stop identifier.
+	StopID string `json:"stopId"`
 	// Name is the human-readable stop name.
 	Name string `json:"name"`
-	// Code is the short public-facing stop code. Nil if not assigned.
-	Code *string `json:"code"`
+	// SubName is a secondary descriptor (e.g. cross-street). Nil if absent.
+	SubName *string `json:"subName"`
+	// HighlightedName is the name with search-match markup applied.
+	HighlightedName string `json:"highlightedName"`
+	// Type is the stop type (0 = StopGroup, 1 = BoardingPoint). The API may
+	// return an int or string; use internal/coerce to convert.
+	Type any `json:"type"`
 	// Location is the stop's GPS position. Nil if not geocoded.
 	Location *Coordinates `json:"location"`
+	// City is the municipality the stop is in. Nil if not set.
+	City *string `json:"city"`
+	// IsIStop is true when the stop is an iStop (accessibility-enhanced).
+	IsIStop bool `json:"isIStop"`
+	// StopCode is the short public-facing stop code. Nil if not assigned.
+	StopCode *string `json:"stopCode"`
+	// Accessible is true when the stop is ADA-accessible.
+	Accessible bool `json:"accessible"`
 }
 
 // StopTime is a single scheduled arrival/departure at a stop, returned by
