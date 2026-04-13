@@ -10,10 +10,13 @@ type Coordinates struct {
 
 // TripDirection identifies the direction of travel for a trip.
 type TripDirection struct {
-	// ID is the direction identifier (e.g. "N", "S", "E", "W").
-	ID string `json:"id"`
+	// ID is the direction identifier. The API may return an int, string, or null;
+	// use internal/coerce to convert.
+	ID any `json:"id"`
 	// Name is the human-readable direction name (e.g. "Northbound").
 	Name string `json:"name"`
+	// ShortName is the abbreviated direction name (single char, e.g. "N"). Nil if absent.
+	ShortName *string `json:"shortName"`
 }
 
 // DayType identifies the service day type for a trip or route.
