@@ -48,7 +48,7 @@ client := cumtd.New("test-key", cumtd.WithBaseURL(srv.URL))
 
 One JSON file per endpoint. Always the API envelope format:
 ```json
-{ "data": [...], "error": null }
+{ "result": [...], "error": null }
 ```
 
 Include ≥ 2 items for collections. Include all fields (including nullable ones) for single-item endpoints.

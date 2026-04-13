@@ -45,7 +45,7 @@ Core SDK package. Library only — no `main.go`, no third-party deps.
 
 - `GetShape` uses `/shapes/{id}` (plural)
 - `GetShapePolyline` uses `/shape/{id}/polyline` (singular — upstream spec bug, match exactly)
-- Auth header is `X-Api-Key`, not a query param
+- Auth header is `X-ApiKey` (no dashes), not a query param
 - Fields typed as `any` (`MinutesTillDeparture`, `SortNumber`, `StopSequence`) — use `internal/coerce`
 - All nullable fields are pointer types (`*string`, `*Coordinates`, etc.)
 - Call `require(field, s)` at top of every method with a required path param

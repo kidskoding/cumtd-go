@@ -1,9 +1,12 @@
 {
-  "data": {
+  "result": {
     "id": "CONFIG1",
-    "type": "bus",
-    "powertrainType": "diesel",
-    "capacity": 40
+    "vehicleType": "bus",
+    "year": 2019,
+    "make": "Nova Bus",
+    "model": "LFS",
+    "lengthFeet": 40,
+    "powertrain": "diesel"
   },
   "error": null
 }

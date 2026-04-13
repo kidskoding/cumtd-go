@@ -1,16 +1,28 @@
 {
-  "data": [
+  "result": [
     {
-      "id": "STOP1",
+      "stopId": "STOP1",
       "name": "Main & First",
-      "code": "001",
-      "location": { "latitude": 40.1164, "longitude": -88.2434 }
+      "subName": "Northbound",
+      "highlightedName": "Main & First",
+      "type": 0,
+      "location": { "latitude": 40.1164, "longitude": -88.2434 },
+      "city": "Champaign",
+      "isIStop": false,
+      "stopCode": "001",
+      "accessible": true
     },
     {
-      "id": "STOP2",
+      "stopId": "STOP2",
       "name": "Main & Second",
-      "code": "002",
-      "location": { "latitude": 40.1170, "longitude": -88.2440 }
+      "subName": null,
+      "highlightedName": "Main & Second",
+      "type": 0,
+      "location": { "latitude": 40.1170, "longitude": -88.2440 },
+      "city": "Champaign",
+      "isIStop": false,
+      "stopCode": "002",
+      "accessible": false
     }
   ],
   "error": null

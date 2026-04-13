@@ -1,16 +1,22 @@
 {
-  "data": [
+  "result": [
     {
       "id": "CONFIG1",
-      "type": "bus",
-      "powertrainType": "diesel",
-      "capacity": 40
+      "vehicleType": "bus",
+      "year": 2019,
+      "make": "Nova Bus",
+      "model": "LFS",
+      "lengthFeet": 40,
+      "powertrain": "diesel"
     },
     {
       "id": "CONFIG2",
-      "type": "bus",
-      "powertrainType": "electric",
-      "capacity": 35
+      "vehicleType": "bus",
+      "year": 2021,
+      "make": "New Flyer",
+      "model": "Xcelsior",
+      "lengthFeet": 40,
+      "powertrain": "electric"
     }
   ],
   "error": null
